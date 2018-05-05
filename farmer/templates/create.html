@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+
+{% block content %}
+<h1 style="border: 5px solid black;">Create new data for Farmer</h1>
+<form method="POST" action="">
+{% csrf_token %}
+    {{ form.as_p }}
+    <input type="submit" value="Create" name="submit"/>
+</form>
+
+{% endblock content %}
+

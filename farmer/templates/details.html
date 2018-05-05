@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block content %}
+
+<h1 style="border: 5px solid black;">{{ title }}</h1>
+{% for data in data_values %}
+
+<label><b>Name: </b></label>{{ data.name }}                              <br/>
+<label><b>Phone Number: </b></label>{{ data.phone }}                     <br/>
+<label><b>Language: </b></label>{{ data.language }}                      <br/>
+<!--<h1>Farm Data</h1>-->
+<label><b>Area: </b></label>{{ data.area }}                              <br/>
+<label><b>Village: </b></label>{{ data.village }}                        <br/>
+<label><b>Crop Grown: </b></label>{{ data.crop_grown }}                  <br/>
+<label><b>Sowing Date: </b></label>{{ data.sowing_date }}                <br/>
+<!--<h1>Scheduled Data</h1>-->
+<label><b>Days After Sowing: </b></label>{{ data.days_after_sowing }}    <br/>
+<label><b>Fertiliser: </b></label>{{ data.fertiliser }}                  <br/>
+<label><b>Quantity: </b></label>{{ data.quantity }} {{ data.quantity_unit }}        <br/>
+<label><b>Price per Unit: </b></label>{{ data.price_unit }} <br/>
+<label><b>Bill Ammount (in Rupees): </b></label>{{ data.bill }} /-
+<hr/>
+
+{% endfor %}
+{% endblock content %}

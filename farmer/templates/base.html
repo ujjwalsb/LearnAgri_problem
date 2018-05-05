@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>
+        {% block title %}
+        {% endblock title %}
+    </title>
+</head>
+<body>
+<br>
+
+<div style="text-align: center; line-height:2; border: 5px solid black; border-radius:10px;">
+    <a href="/create/" >Fill new Farmer details</a><br>
+    <a href="/">Farmer Details</a><br>
+    <a href="/schedule/">Schedules due for today / tomorrow</a><br>
+    <a href="/cropgrown/">Farmer growing crops</a><br>
+</div>
+
+<div style="text-align: center; line-height: 2">
+{% block content %}
+
+{% endblock content %}
+</div>
+</body>
+</html>

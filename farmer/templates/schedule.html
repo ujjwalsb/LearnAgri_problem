@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block content %}
+
+<h1 style="border: 5px solid black;">{{ title }}</h1>
+
+{% for data in data_values %}
+
+<label><b>Name: </b></label>{{ data.name }}                              <br/>
+<label><b>Area: </b></label>{{ data.area }}                              <br/>
+<label><b>Village: </b></label>{{ data.village }}                        <br/>
+<label><b>Crop Grown: </b></label>{{ data.crop_grown }}                  <br/>
+<label><b>Sowing Date: </b></label>{{ data.sowing_date }}                <br/>
+<label><b>Days After Sowing: </b></label>{{ data.days_after_sowing }}    <br/>
+
+<hr/>
+
+{% endfor %}
+
+{% endblock content %}

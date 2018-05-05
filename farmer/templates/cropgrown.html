@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    {{ title }}
+{% endblock title %}
+
+{% block content %}
+
+<h1 style="border: 5px solid black;">{{ title }}</h1>
+
+{% for crop in crop_values %}
+
+<label><b>Name: </b></label>{{ crop.name }}                              <br/>
+<label><b>Phone Number: </b></label>{{ crop.phone }}                     <br/>
+<label><b>Language: </b></label>{{ crop.language }}                      <br/>
+<label><b>Area: </b></label>{{ crop.area }}                              <br/>
+<label><b>Village: </b></label>{{ crop.village }}                        <br/>
+<label><b>Crop Grown: </b></label>{{ crop.crop_grown }}                  <br/>
+<label><b>Sowing Date: </b></label>{{ crop.sowing_date }}                <br/>
+<hr/>
+
+{% endfor %}
+
+{% endblock content %}
